@@ -136,8 +136,8 @@
             z-index: 1;
         }
         /* 最后两页内容居中样式 */
-        .page[data-page="5"] .section,
-        .page[data-page="6"] .section {
+        .page[data-page="6"] .section,
+        .page[data-page="7"] .section {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -145,19 +145,19 @@
             min-height: calc(100vh - 120px); /* 占满页面高度（减去边距和状态条） */
             text-align: center;
         }
-        .page[data-page="5"] .section p,
-        .page[data-page="6"] .section p {
+        .page[data-page="6"] .section p,
+        .page[data-page="7"] .section p {
             text-indent: 0; /* 取消首行缩进，居中更美观 */
             max-width: 90%; /* 限制最大宽度，避免文字过宽 */
             margin-left: auto;
             margin-right: auto;
         }
-        .page[data-page="5"] .time-table {
+        .page[data-page="6"] .time-table {
             margin-left: auto;
             margin-right: auto;
             max-width: 95%; /* 表格自适应宽度 */
         }
-        .page[data-page="6"] .footer-section {
+        .page[data-page="7"] .footer-section {
             margin-top: 20px;
         }
         .section-title {
@@ -171,14 +171,14 @@
             display: inline-block;
         }
         /* 最后两页的section-title取消左边框，居中显示 */
-        .page[data-page="5"] .section-title,
-        .page[data-page="6"] .section-title {
+        .page[data-page="6"] .section-title,
+        .page[data-page="7"] .section-title {
             border-left: none;
             padding-left: 0;
             margin-bottom: 20px;
         }
-        .page[data-page="5"] .section-title::after,
-        .page[data-page="6"] .section-title::after {
+        .page[data-page="6"] .section-title::after,
+        .page[data-page="7"] .section-title::after {
             left: 0;
             width: 100%;
         }
@@ -383,7 +383,7 @@
             }
         }
         /* 最后一页隐藏翻页提示 */
-        .page[data-page="6"] ~ .scroll-tip {
+        .page[data-page="7"] ~ .scroll-tip {
             display: none;
         }
         /* 桌面端适配（大屏恢复原有比例） */
@@ -440,11 +440,11 @@
                 margin-bottom: 50px;
             }
             /* 桌面端最后两页内容居中调整 */
-            .page[data-page="5"] .section,
-            .page[data-page="6"] .section {
+            .page[data-page="6"] .section,
+            .page[data-page="7"] .section {
                 min-height: calc(100vh - 200px);
             }
-            .page[data-page="5"] .time-table {
+            .page[data-page="6"] .time-table {
                 max-width: 70%;
             }
             .section-title {
@@ -453,8 +453,8 @@
                 border-left: 4px solid #8b4513;
                 padding-left: 15px;
             }
-            .page[data-page="5"] .section-title,
-            .page[data-page="6"] .section-title {
+            .page[data-page="6"] .section-title,
+            .page[data-page="7"] .section-title {
                 border-left: none;
                 padding-left: 0;
                 font-size: 1.8rem;
@@ -598,7 +598,7 @@
                         <div class="title-section">
                             <h1>优读剧场第二期</h1>
                             <h2>《烽火卷书：黔州星火》邀请函</h2>
-                            <p>—— 典耀中华主题读书活动之“时光共振优读剧场” ——</p>
+                            <p>—— 典耀中华主题读书活动 ——</p>
                         </div>
 
                         <div class="section intro-section">
@@ -615,8 +615,29 @@
                 </div>
             </div>
 
-            <!-- 第2页 -->
+            <!-- 新增第2页：简洁邀请页 -->
             <div class="page" data-page="2">
+                <div class="mask">
+                    <div class="invitation">
+                        <div class="section invite-section">
+                            <h3 class="section-title">特邀莅临</h3>
+                            <p>尊敬的XXX：</p>
+                            <p>图书馆将于2025年11月12日14：00，在图书馆三楼会议室举办优读剧场第二期《烽火卷书：黔州星火》，期待您的到来！</p>
+                            <p style="text-align: right; margin-top: 30px; text-indent: 0;">图书馆</p>
+                            <p style="text-align: right; text-indent: 0;">2025年11月6日</p>
+                            
+                            <div class="img-container" style="margin-top: 20px;">
+                                <span class="img-loading">邀请页配图加载中...</span>
+                                <span class="img-error" id="error-tu-invite">非常抱歉，图片加载失败</span>
+                                <img src="images/tu-invite.png" alt="优读剧场邀请配图" class="content-img" id="img-tu-invite">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 原第2页 → 现第3页 -->
+            <div class="page" data-page="3">
                 <div class="mask">
                     <div class="invitation">
                         <div class="section content-section">
@@ -637,8 +658,8 @@
                 </div>
             </div>
 
-            <!-- 第3页 -->
-            <div class="page" data-page="3">
+            <!-- 原第3页 → 现第4页 -->
+            <div class="page" data-page="4">
                 <div class="mask">
                     <div class="invitation">
                         <div class="section content-section">
@@ -657,8 +678,8 @@
                 </div>
             </div>
 
-            <!-- 第4页 -->
-            <div class="page" data-page="4">
+            <!-- 原第4页 → 现第5页 -->
+            <div class="page" data-page="5">
                 <div class="mask">
                     <div class="invitation">
                         <div class="section content-section">
@@ -677,8 +698,8 @@
                 </div>
             </div>
 
-            <!-- 第5页 -->
-            <div class="page" data-page="5">
+            <!-- 原第5页 → 现第6页 -->
+            <div class="page" data-page="6">
                 <div class="mask">
                     <div class="invitation">
                         <div class="section time-section">
@@ -724,8 +745,8 @@
                 </div>
             </div>
 
-            <!-- 第6页 -->
-            <div class="page" data-page="6">
+            <!-- 原第6页 → 现第7页 -->
+            <div class="page" data-page="7">
                 <div class="mask">
                     <div class="invitation">
                         <div class="section invitee-section">
@@ -743,7 +764,7 @@
             </div>
         </div>
         <!-- 底部状态条 -->
-        <div class="page-status" id="status">当前 1/6 页 · 5秒后自动翻页（点击箭头/上下滑动可切换）</div>
+        <div class="page-status" id="status">当前 1/7 页 · 5秒后自动翻页（点击箭头/上下滑动可切换）</div>
         <!-- 动态翻页提示（极致缩小版） -->
         <div class="scroll-tip" id="scrollTip">
             <div class="scroll-arrow"></div>
@@ -752,9 +773,9 @@
     </div>
 
     <script>
-        // 翻页配置
+        // 翻页配置（总页数更新为7）
         const config = {
-            totalPages: 6,  // 总页数
+            totalPages: 7,  // 总页数更新为7
             interval: 5000, // 自动翻页间隔(ms)
             currentPage: 1, // 当前页
             startY: 0,      // 触摸起始Y坐标
@@ -825,7 +846,7 @@
 
         // 图片加载处理
         document.addEventListener('DOMContentLoaded', function() {
-            // 本地图片配置列表（新增校徽图片）
+            // 本地图片配置列表（新增邀请页图片）
             const localImageConfig = [
                 {
                     imgId: 'schoolLogo',
@@ -838,6 +859,12 @@
                     errorId: 'error-tu1',
                     localPath: 'images/tu1.png',
                     imgDesc: '活动主题图（tu1.png）'
+                },
+                {
+                    imgId: 'img-tu-invite',
+                    errorId: 'error-tu-invite',
+                    localPath: 'images/tu-invite.png',
+                    imgDesc: '邀请页配图（tu-invite.png）'
                 },
                 {
                     imgId: 'img-tu2',
